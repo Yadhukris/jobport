@@ -16,9 +16,11 @@ import { JobpostComponent } from './jobpost/jobpost.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularMaterialModule } from './angular-material/angular-material.module';
-import { AboutusComponent } from './aboutus/aboutus.component';
 import { IndexComponent } from './index/index.component';
 import { FooterComponent } from './footer/footer.component';
+import { AdminHomeComponent } from './admin-home/admin-home.component';
+import { EmployerHomeComponent } from './employer-home/employer-home.component';
+import { EmployerLoginComponent } from './employer-login/employer-login.component';
 
 @NgModule({
   declarations: [
@@ -30,9 +32,11 @@ import { FooterComponent } from './footer/footer.component';
     AlljobsComponent,
     JobpostComponent,
     NavbarComponent,
-    AboutusComponent,
     IndexComponent,
-    FooterComponent
+    FooterComponent,
+    AdminHomeComponent,
+    EmployerHomeComponent,
+    EmployerLoginComponent
   ],
   imports: [
     BrowserModule,

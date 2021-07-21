@@ -4,12 +4,13 @@ import { Router } from '@angular/router';
 import { AdminService } from '../services/admin.service';
 
 @Component({
-  selector: 'app-admin',
-  templateUrl: './admin.component.html',
-  styleUrls: ['./admin.component.css']
+  selector: 'app-employer-login',
+  templateUrl: './employer-login.component.html',
+  styleUrls: ['./employer-login.component.css']
 })
-export class AdminComponent implements OnInit {
+export class EmployerLoginComponent implements OnInit {
 
+ 
   hide=true;
     
   
@@ -43,7 +44,7 @@ loginUser () {
       console.log("hai");
       console.log(res)
       alert("User sucessfully added");
-      this.routes.navigate(["/admin/home"]);
+      this.routes.navigate(["/emplyer-login/home"]);
       
     },
     err =>{
@@ -64,5 +65,5 @@ loginUser () {
   
 }
 
-
+  
 }
