@@ -21,6 +21,9 @@ import { FooterComponent } from './footer/footer.component';
 import { AdminHomeComponent } from './admin-home/admin-home.component';
 import { EmployerHomeComponent } from './employer-home/employer-home.component';
 import { EmployerLoginComponent } from './employer-login/employer-login.component';
+import { AuthService } from './auth.service';
+import { AlumniService } from './alumni.service';
+import { AlumniHomeComponent } from './alumni-home/alumni-home.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +39,8 @@ import { EmployerLoginComponent } from './employer-login/employer-login.componen
     FooterComponent,
     AdminHomeComponent,
     EmployerHomeComponent,
-    EmployerLoginComponent
+    EmployerLoginComponent,
+    AlumniHomeComponent
   ],
   imports: [
     BrowserModule,
@@ -45,10 +49,9 @@ import { EmployerLoginComponent } from './employer-login/employer-login.componen
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    AngularMaterialModule
-
+    AngularMaterialModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [AuthService,AlumniService],
+  bootstrap: [AppComponent ]
 })
 export class AppModule { }

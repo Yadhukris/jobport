@@ -27,10 +27,10 @@
                       <mat-card-title>Log in</mat-card-title>
                     </mat-card-header>
                 
-                    <form [formGroup]='loginForm' (ngSubmit)="loginUser ()" class="example-form">
+                    <form [formGroup]='loginForm' (ngSubmit)="loginUser()" class="example-form">
                       
                         <mat-form-field class="example-full-width">
-                          <input formControlName="email"  matInput placeholder="Email">
+                          <input formControlName="email"  matInput placeholder="Email" [(ngModel)]="user.email">
                           
                             <mat-error class="error-text" *ngIf="loginFormControl.email.errors?.required" >Email is required</mat-error>
                             <mat-error class="error-text" *ngIf="loginFormControl.email.errors?.pattern"> Email format Error
@@ -39,7 +39,7 @@
                         </mat-form-field>
                 
                         <mat-form-field  class="example-full-width">
-                          <input  formControlName="password" matInput  [type]="hide ? 'password' : 'text'" placeholder="Password">
+                          <input  formControlName="password" matInput  [type]="hide ? 'password' : 'text'" placeholder="Password" [(ngModel)]="user.password">
                           <button type="button"  mat-icon-button matSuffix (click)="hide =!hide" >
                             <mat-icon >{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
                           </button>
@@ -71,7 +71,7 @@
                 
                       
                         <mat-form-field class="example-full-width">
-                          <input formControlName="uname" matInput placeholder="Username">
+                          <input formControlName="uname" matInput placeholder="Username" [(ngModel)]="alumnidetails.uname" >
                         
                             <mat-error class="error-text" *ngIf="signupFormControl.uname.errors?.required" >name  is required</mat-error>
                             <mat-error class="error-text" *ngIf="signupFormControl.uname.errors?.pattern"> Minimun 5 charaters ,No spaces are allowed
@@ -81,7 +81,7 @@
                         </mat-form-field>
                 
                         <mat-form-field class="example-full-width">
-                          <input formControlName="email" matInput placeholder="Email">
+                          <input formControlName="email" matInput placeholder="Email" [(ngModel)]="alumnidetails.email">
                          
                             <mat-error class="error-text" *ngIf="signupFormControl.email.errors?.required" >Email is required</mat-error>
                             <mat-error class="error-text" *ngIf="signupFormControl.email.errors?.pattern"> Email format Error
@@ -90,14 +90,14 @@
                         </mat-form-field>
                         
                         <mat-form-field class="example-full-width">
-                          <input  formControlName="city"  matInput placeholder="City">
+                          <input  formControlName="city"  matInput placeholder="City" [(ngModel)]="alumnidetails.city">
                         
                             <mat-error class="error-text" *ngIf="signupFormControl.city.errors?.required" >City is required</mat-error>
                            
                          
                         </mat-form-field>
                         <mat-form-field class="example-full-width">
-                          <input formControlName="hq" matInput placeholder="Highest qualification">
+                          <input formControlName="hq" matInput placeholder="Highest qualification" [(ngModel)]="alumnidetails.hq">
                           
                             <mat-error class="error-text" *ngIf="signupFormControl.hq.errors?.required" >Qualification is required</mat-error>
                            
@@ -105,7 +105,7 @@
                         </mat-form-field>
                         
                         <mat-form-field class="example-full-width">
-                          <input type="password" formControlName="password" matInput placeholder="Password">
+                          <input type="password" formControlName="password" matInput placeholder="Password" [(ngModel)]="alumnidetails.password">
                           
                           
                             <mat-error class="error-text" *ngIf="signupFormControl.password.errors?.required" >Password is required</mat-error>
